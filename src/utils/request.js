@@ -29,7 +29,6 @@ httpRequest.interceptors.response.use(
     if (code == 200) {
       return data;
     } else if (code == 901) {
-      console.log(1234);
       ElMessage({
         type: "error",
         message: "身份验证失败，请重新登陆",

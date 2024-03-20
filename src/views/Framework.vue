@@ -53,11 +53,22 @@ const toManage = () => {
       </div>
       <div class="copyright" v-if="sysSetting.showIcp">
         <p>
-          ©2021-2023 {{ sysSetting.icpDomain }} All rights reserved.
-          {{ sysSetting.policeProvince }}ICP备{{ sysSetting.icpNo }}号-3
+          ©2023-2024 {{ sysSetting.icpDomain }} All rights reserved.
+          <a href="https://beian.miit.gov.cn/">
+            {{ sysSetting.policeProvince }}ICP备{{ sysSetting.icpNo }}
+          </a>
         </p>
         <p>
-          {{ sysSetting.policeProvince }}公网安备 {{ sysSetting.policeNo }}号
+          <img src="../assets/备案图标.png" alt="" />
+
+          <a
+            href="https://beian.mps.gov.cn/#/query/webSearch?code=34180202000582"
+            rel="noreferrer"
+            target="_blank"
+          >
+            {{ sysSetting.policeProvince }}公网安备
+            {{ sysSetting.policeNo }}号</a
+          >
         </p>
       </div>
     </div>
@@ -91,6 +102,16 @@ const toManage = () => {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    color: #464646;
+    a {
+      color: #464646;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
   }
 }
 </style>
